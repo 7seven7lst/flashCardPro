@@ -7,9 +7,9 @@ angular.module('flashcard', ['ui.router', 'flashcard.card'])
     .state('home', {
       url: '/home',
       views: {
-        main_view: {
-          templateUrl: './views/main.html',
-          controller: 'cardController'
+        cards_view: {
+          templateUrl: './views/cards.html',
+          controller: 'cardsController'
         }
         
       }
