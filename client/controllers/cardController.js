@@ -1,5 +1,5 @@
 angular.module('flashcard.card',[])
-.controller('cardsController', ['$scope', function($scope){
+.controller('cardsController', ['$scope','$http',function($scope, $http){
   $scope.decks =[{front: '1', back:'one', display: 'front'},
   {front: '2', back:'two', display: 'front'},
   {front: '3', back:'three', display: 'front'},
@@ -15,4 +15,14 @@ angular.module('flashcard.card',[])
       $scope.decks[index].display = 'front';
     }
   };
+
+  $scope.fetchData = function(){
+    $http.get('/api/javascript')
+    .success(function(data) {
+      console.log(data);
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+  }
 }]);
