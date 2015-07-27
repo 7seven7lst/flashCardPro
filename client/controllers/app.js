@@ -1,4 +1,4 @@
-angular.module('flashcard', ['ui.router', 'flashcard.card'])
+angular.module('flashcard', ['ui.router', 'ngFx', 'ngAnimate','flashcard.main', 'flashcard.cards'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
@@ -15,5 +15,7 @@ angular.module('flashcard', ['ui.router', 'flashcard.card'])
       }
     });
 })
+/*
 .controller('mainController', ['$scope',function($scope) {
 }]);
+*/

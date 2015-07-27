@@ -1,6 +1,10 @@
 <div ng-controller="cardsController">
-  <div ng-repeat="card in decks">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 card" ng-click="toggleDisplay($index)">{{card[card.display]}} </div>
+  <div ng-repeat="card in decks" class="fx-fade-down fx-easing-bounce">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 card" ng-click="toggleDisplay($index)">
+    {{card[card.display]}} 
+    </div>
   </div>
-  <button ng-click="fetchData()">Click</button>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <button class="fx-pulse fx-speed-500" ng-click="fetchData(consoleLog)" pulse-on-click>Click</button>
+  </div>
 </div>
